@@ -1,0 +1,850 @@
+body {
+  margin: 0;
+  
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  position: relative;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* .toolbar{
+  background-color: rgba(250, 253, 251, 0.374);
+}
+
+.con{
+  background-color: rgba(250, 253, 251, 0.374);
+}
+
+.ab{
+  background-color: rgb(19, 250, 96);
+} */
+
+/* body{
+  background-color: aqua;
+} */
+
+/* .upcomingEvents{
+
+width: 100%;
+height: 100vh;
+  transform: translateX(-50%);
+  border-bottom: 1px solid orange;
+  border-left: 1px solid orange;
+  border-right: 1px solid orange;
+  border-bottom-left-radius: 100px;
+  border-bottom-right-radius: 100px;
+ background-color: yellow;
+} */
+
+
+.container{
+  height: 70vh;
+  width: 100%;
+  background-color: rgb(255, 255, 255);
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.innerdiv{
+height: 100px;
+width: 160px;
+background-color: rgb(255, 255, 255);
+border-radius: 50%;
+position: absolute;
+top: -25%;
+display: flex;
+justify-content: center;
+
+}
+
+
+.arrow{
+  margin-top: 10%;
+color: orange;
+animation-name: arrowanim;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes arrowanim {
+  0%   {margin-top: 10%;}
+  50%  {margin-top: 25%;}
+  100% {margin-top: 10%;}
+}
+.slomoicon{
+  color: orange;
+}
+
+.events{
+  width: 90vw;
+  height: 70vh;
+  margin-top: 0%;
+}
+
+
+
+
+.slider{
+  width: 90vw;
+  height: 60vh;
+  /* background-color: aqua; */
+}
+
+
+
+
+
+
+
+.container2 {
+  position: relative;
+  margin-top: 3%;
+}
+
+.control {
+  list-style: none;
+}
+.control li {
+  position: absolute;
+  z-index: 99;
+  top: 50%;
+  transform: translateY(-50%);
+  color: white;
+  background: rgba(0, 0, 0, 0.5);
+  padding: 12px 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+.control li:hover {
+  background: #000;
+}
+.control li.prev {
+  left: 20px;
+}
+.control li.next {
+  right: 20px;
+}
+.tns-nav {
+  text-align: center;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.tns-nav button {
+  height: 13px;
+  width: 8px;
+  background-color: #a5a5a5;
+  border: none;
+  margin-left: 7px;
+  border-radius: 50%;
+}
+.tns-nav .tns-nav-active {
+  background-color: black;
+}
+/* .scale{
+  animation-name: scale;
+  transform-origin: center
+}
+@keyframes scale{
+  from {
+    transform: rotate(90deg);
+  }
+  to{
+    transform: rotate(0deg);
+  }
+} */
+/* Youtube link */
+.link {
+  position: fixed;
+  background-color: #d12322;
+  padding: 23px 40px;
+  right: 0;
+  border-radius: 5px;
+  top: 0;
+  font-size: 18px;
+  font-weight: 500;
+  color: #fff;
+  text-decoration: none;
+  text-transform: capitalize;
+  transition: all 0.1s ease-in-out;
+}
+
+.link i {
+  padding-left: 7px;
+}
+
+.link:hover {
+  text-decoration: underline;
+  background-color: black;
+}
+
+.App {
+  font-family: sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.card{
+  box-shadow: 2px 2px 4px 4px rgba(128, 128, 128, 0.614);
+}
+/* .s1{
+  background-image: url(https://img.freepik.com/free-vector/music-festival-poster-template_52683-40484.jpg?size=338&ext=jpg&uid=R36971962&ga=GA1.2.1749564066.1614758758);
+} */
+
+.iteminner{
+ height: 100%;
+ width: 100%;
+ display: flex;
+ flex-direction: column;
+ justify-content: center;
+ align-items: center;
+ padding-left: 35px;
+ padding-right: 35px;
+}
+
+.iteminner:hover{
+  background-color: rgba(5, 5, 5, 0.719);
+
+}
+
+.items:hover{
+  transform: scale(1.2);
+  transition: width 1s, height 1s, transform 1s;
+  cursor: pointer;
+}
+
+#name{
+  display: none;
+}
+
+#address{
+  display: none;
+}
+
+#phone{
+  display: none;
+}
+
+#inner:hover  #name {
+  display: block;
+  transition: width 2s linear 1s;
+}
+
+#inner:hover  #address {
+  display: block;
+  transition: width 2s linear 1s;
+}
+
+#inner:hover  #phone {
+  display: block;
+  transition: width 2s linear 1s;
+}
+
+.datediv{
+  height: 11%;
+  width: 75%;
+  background-color: rgb(10, 10, 181);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+ align-items: center;
+ 
+}
+
+#date{
+  display: none;
+}
+
+#inner:hover  #date {
+  display: block;
+  transition: width 2s linear 1s;
+  
+}
+
+
+
+.rec-arrow {
+  background-color: var(--blue) !important;
+  transition: all 0.3s ease;
+  font-size: 1.1rem !important;  
+  width: 1.7rem !important;
+  height: 1.7rem !important;
+  min-width: 1.7rem !important;
+  line-height: 1.7rem !important;
+}
+
+@media only screen and (max-width: 600px) {
+ 
+  .rec-arrow {
+    font-size: 0.7rem !important;  
+    width: 1.2rem !important;
+    height: 1.2rem !important;
+    min-width: 1rem !important;
+    line-height: 1rem !important;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin-right: 40px !important;
+  }
+  .rec-arrow:last-child {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    margin-right: 10px !important;
+  }
+  
+}
+
+
+@media only screen and (max-width: 210px) {
+ 
+  .rec-arrow {
+    font-size: 0.7rem !important;  
+    width: 1.2rem !important;
+    height: 1.2rem !important;
+    min-width: 1rem !important;
+    line-height: 1rem !important;
+    position: absolute;
+    top: 35px;
+    right: 0px;
+    margin-right: 40px !important;
+  }
+
+  .rec-arrow:last-child {
+    position: absolute;
+    top: 35px;
+    right: 0px;
+    margin-right: 10px !important;
+  }
+  
+}
+
+
+.addr{
+  font-size: 0.75rem;
+    text-align: center;
+     font-family: IBM Plex Sans;
+}
+
+.pho{
+  font-size: 0.9rem
+}
+
+.nam{
+  font-size: 1.3rem; font-family: Kanit
+}
+
+.da{
+  font-size: 0.7rem; text-align: center;
+  margin-top: 5px;
+}
+@media only screen and (max-width: 300px) {
+ 
+  .events{
+    width: 100vw;
+  }
+  .slider{
+    width: 100vw;
+  }
+  .addr{
+    font-size: 0.6rem;
+  }
+
+  .pho{
+    font-size: 0.6rem;
+    margin-top: -8px;
+  }
+  
+  .nam{
+    font-size: 1rem;
+  }
+  .da{
+    font-size: 0.5rem;
+    margin-top: 8px;
+  }
+}
+
+
+
+
+
+.intro{
+height: auto;
+width: 100%;
+/* background-color: aqua; */
+display: flex;
+}
+
+.imagesec{
+height: 60vh;
+width: 40%;
+/* background-color: rgb(248, 248, 35); */
+display: flex;
+justify-content: center;
+align-items: center;
+
+}
+
+.detailsec{
+  height: 60vh;
+  width: 60%;
+  display: flex;
+flex-direction: column;
+margin-right: 10px;
+justify-content: center;
+  /* background-color: blue; */
+}
+
+img{
+  width: 350px;
+  height: 450px;
+  object-fit: contain;
+}
+
+@media only screen and (max-width: 890px) {
+.intro{
+  display: flex;
+  flex-direction: column;
+}
+.imagesec{
+  width: 100%;
+}
+
+.detailsec{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+align-items: center;
+}
+
+
+}
+
+@media only screen and (max-width: 360px) {
+
+  img{
+    width: 250px;
+    height: 350px;
+    object-fit: contain;
+    
+  }
+}
+
+@media only screen and (max-width: 250px) {
+
+  img{
+    width: 130px;
+    height: 250px;
+    object-fit: contain;
+  }
+
+  .imagesec{
+    height: 30vh;
+  }
+}
+
+
+.section3{
+height: auto;
+width: 100%;
+display: flex ;
+}
+
+.ls{
+  height: 80vh;
+  width: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("https://img.freepik.com/free-photo/dj-playing-music-mixer_155003-2683.jpg?t=st=1651964664~exp=1651965264~hmac=c215831da605da88ba4bc4974e9980df50e51e04ab3c24846e72bbf3851716ba&w=740");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.rs{
+  height: 80vh;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+
+.in1{
+height: 40vh;
+width: 100%;
+display: flex;
+}
+
+.inn1{
+height: 40vh;
+width: 100%;
+background-color: rgba(12, 12, 230, 0.781);
+display: flex;
+justify-content: center;
+flex-direction: column;
+align-items: center;
+padding-left: 8px;
+padding-right: 8px;
+}
+
+
+
+.in2{
+  height: 40vh;
+  width: 100%;
+  display: flex;
+
+  }
+  
+  .inn2{
+  height: 40vh;
+  width: 100%;
+  background-color: rgba(53, 53, 227, 0.907);
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 8px;
+  padding-right: 8px;
+  }
+
+
+
+  @media only screen and (max-width: 700px) {
+
+    .section3{
+      margin-top: 30px;
+      height: 270vh;
+      display: flex ;
+      flex-direction: column;
+      }
+      .ls{
+        height: 50vh;
+        width: 100%;
+     
+      }
+      .in1{
+        height: auto;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      
+      }
+
+      .inn2{
+        height: 50vh;
+        width: 80%;
+        box-shadow: 1px 1px 2px 2px rgba(158, 155, 155, 0.628);
+        border-radius: 10px;
+        margin-top: 20px;
+        }
+
+        .inn1{
+          height: 50vh;
+          width: 80%;
+          box-shadow: 1px 1px 2px 2px rgba(158, 155, 155, 0.628);
+          border-radius: 10px;
+          margin-top: 20px;
+
+        }
+
+
+  }
+
+
+  .section4{
+    
+    width: 100%;
+    display: flex;
+  }
+
+  .tracks{
+    width: 50%;
+    height: 90vh;
+ padding-left: 20px;
+ padding-right: 20px;
+      margin:4px, 4px;
+      padding:4px;
+      overflow-x: hidden;
+      overflow-y: auto;
+      text-align:justify;
+  }
+
+.trackrs{
+  width: 50%;
+    height: 80vh;
+    background-color: rgba(223, 215, 215, 0.23);
+    position: relative;
+}
+
+  .trackimg{
+    width: 90%;
+    height: 90vh;
+    background-image: url("https://img.freepik.com/free-photo/dj-playing-music-mixer_155003-2686.jpg?w=740&t=st=1651972033~exp=1651972633~hmac=80c8a16ade82b2726c49cc6aab2f8f720ef6f540fb84dc92fbfd0a9161cd4544");
+  background-repeat: no-repeat;
+  background-size: cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  }
+
+
+  .music{
+    background-color: rgba(223, 215, 215, 0.093);
+    padding-left: 20px;
+    padding-right: 20px;
+    border-radius: 10px;
+    margin-right: 10px;
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+  .youtubefeed{
+    margin-top: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  @media only screen and (max-width: 600px) {
+    .section4{
+      flex-direction: column;
+    }
+    
+    .tracks{
+      width: 100%;
+    }
+    .trackrs{
+      margin-top: 5%;
+      width: 100%;
+    }
+    .trackimg{
+      width: 100%;
+    }
+    .youtubefeed{
+      margin-top: 20%;
+    }
+
+  }
+
+
+  .main2{
+    margin-top: 10%;
+    margin-left: 5%;
+    margin-right: 5%;
+  }
+
+
+  
+
+  @media only screen and (max-width: 300px) {
+  .youtubefeed{
+    margin-top: 40%;
+  }
+  }
+
+  .feedinner{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    width: 100%;
+    gap: 3%;
+  }
+
+  .inner1{
+    width: 30%;
+    height: 45vh;
+/* background-color: #d12322; */
+display: flex;
+justify-content: center;
+align-items: center;
+  }
+
+  .i1{
+    background-image: url("https://img.freepik.com/free-vector/night-party-music-banner-social-media-template_17005-1357.jpg?t=st=1652068139~exp=1652068739~hmac=daa394bc6b85b538d4df7d52b4295d3d9a3f726ff85b8a105fbe751ccdbce695&w=740");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .i2{
+    background-image: url("https://img.freepik.com/free-vector/music-event-poster-template-with-colorful-shapes_1361-1591.jpg?t=st=1652068572~exp=1652069172~hmac=b6363aa31238968c6dcfbc7e85c7c6d7b96494b6750ab96e83492631a0045232&w=740");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  .i3{
+    background-image: url("https://img.freepik.com/free-vector/music-event-poster-template-with-abstract-shapes_1361-1316.jpg?t=st=1652068572~exp=1652069172~hmac=a5866334aa634e8b1d3b7648c60b9c6b8618d12433b7454debf55ff36c3d6749&w=740");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  @media only screen and (max-width: 700px) {
+    .feedinner{
+      flex-direction: column;
+    }
+
+    .inner1{
+      width: 90%;
+      margin-bottom: 5%;
+     
+    }
+
+  }
+
+
+
+  .timmer{
+height: 100vh;
+width: 100%;
+margin-top: 5%;
+background-image: url("https://img.freepik.com/free-photo/african-american-dj-huge-white-headphones-creating-music-mixing-panel-black-white-photo_627829-3781.jpg?t=st=1652072369~exp=1652072969~hmac=bc00172bd0b1252980ddc701c7bc547c8f502af10183a267b127b0128866da96&w=740");
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+display: flex;
+justify-content: center;
+  }
+
+
+  /* .footer{
+    height: 50vh;
+    width: 100%;
+    background-image: url("https://img.freepik.com/free-vector/abstract-golden-wave-dark-background_52683-22163.jpg?t=st=1652165382~exp=1652165982~hmac=4b66f802ab42e89ae7c38f18879ff226ae52154e41a772e1918bebb971e9c035&w=740");
+background-repeat: no-repeat;
+background-size: cover;
+background-position: center;
+  } */
+
+
+.timmer2{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+background-color: rgba(0, 0, 0, 0.722);    
+}
+
+  .innertimmer{
+    width: 70%;
+    display: flex ;
+    flex-direction: column;
+  }
+
+
+  .j1{
+    
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    
+  }
+
+  .j2{
+    width: 40%;
+    height: 25vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+
+  .hh2{
+    font-size: 6rem;
+    font-family: 'Koulen';
+    color: #fff;
+  }
+
+.para2{
+  font-family: 'IBM Plex Sans';
+  color: white;
+}
+
+
+@media only screen and (max-width: 700px) {
+  .innertimmer{
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 350px) {
+  .innertimmer{
+    flex-direction: column;
+  }
+  .hh2{
+    font-size: 5rem;
+    font-family: 'Koulen'
+  }
+
+.para2{
+  font-family: 'IBM Plex Sans';
+  font-size: 1rem;
+}
+}
+
+
+
+@media only screen and (max-width: 280px) {
+  .innertimmer{
+    flex-direction: column;
+  }
+  .hh2{
+    font-size: 3rem;
+    font-family: 'Koulen'
+  }
+
+.para2{
+  font-family: 'IBM Plex Sans';
+  font-size: 0.5rem;
+}
+}
+.appcon{
+  background-color: rgba(0, 0, 0, 0.377);
+  height: 90vh;
+ width: 100%;
+}
+
+.skip-back{
+  color: #fff;
+}
+
+.skip-back:hover{
+  transform: scale(1.3);
+color: yellow;
+}
+
+.play{
+  color: #fff;
+}
+
+.play:hover{
+  transform: scale(1.3);
+color: yellow;
+}
+
+.skip-forward{
+  color: #fff;
+}
+
+.skip-forward:hover{
+  transform: scale(1.3);
+color: yellow;
+}
+
+
